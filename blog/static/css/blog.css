@@ -1,0 +1,13 @@
+h1 {
+  color: purple;
+  font-family: 'Lobster';
+}
+
+h2 a {
+  color: blue;
+}
+
+body {
+  padding-left: 15px;
+  font-family: 'Lobster';
+}
