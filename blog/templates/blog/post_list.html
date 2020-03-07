@@ -11,24 +11,13 @@
   </b>
   <br>
   <h2>Welcome to my blog here you can look every week to see great new facts on your favourite creepy critters!</h2>
+  {% for post in posts %}
   <div>
-    <hr>
-
-    <h2><a href="">Hummingbirds</a></h2>
-    <p>Although yay they are not bugs they are still really interesting!</p>
-    <b>
-      <p>published: 14.06.2014, 12:14</p>
-    </b>
+    <p>published: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
   </div>
-
-  <div>
-
-    <h2><a href="">Ants</a></h2>
-    <p> Ants are really light right!</p>
-    <b>
-      <p>published: 14.06.2014, 12:14</p>
-    </b>
-  </div>
+  {% endfor %}
 
 
 
