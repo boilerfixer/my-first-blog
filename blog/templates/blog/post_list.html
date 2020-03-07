@@ -12,16 +12,27 @@
 </head>
 
 <body>
-  <b>
-    <h1>New Bug facts every week!</h1>
-  </b>
-  <br>
+  <div class="page-header"><b>
+      <h1>New Bug facts every week!</h1>
+    </b>
+    <br></div>
   <h2>Welcome to my blog here you can look every week to see great new facts on your favourite creepy critters!</h2>
   {% for post in posts %}
-  <div>
-    <p>published: {{ post.published_date }}</p>
-    <h2><a href="">{{ post.title }}</a></h2>
-    <p>{{ post.text|linebreaksbr }}</p>
+  <hr>
+  <div class="content container">
+    <div class="row">
+      <div class="col-md-8">
+        {% for post in posts %}
+        <div class="post">
+          <div class="date">
+            <p>published: {{ post.published_date }}</p>
+          </div>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
   {% endfor %}
 </body>
